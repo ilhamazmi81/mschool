@@ -5,9 +5,9 @@ class M_pengumuman extends CI_Model{
 		$hsl=$this->db->query("SELECT pengumuman_id,pengumuman_judul,pengumuman_deskripsi,DATE_FORMAT(pengumuman_tanggal,'%d/%m/%Y') AS tanggal,pengumuman_author FROM tbl_pengumuman ORDER BY pengumuman_id DESC");
 		return $hsl;
 	}
-	function simpan_pengumuman($judul,$deskripsi){
+	function simpan_pengumuman($judul,$deskripsi,$gambar){
 		$author=$this->session->userdata('nama');
-		$hsl=$this->db->query("INSERT INTO tbl_pengumuman(pengumuman_judul,pengumuman_deskripsi,pengumuman_author) VALUES ('$judul','$deskripsi','$author')");
+		$hsl=$this->db->query("INSERT INTO tbl_pengumuman(pengumuman_judul,pengumuman_deskripsi,pengumuman_author,pengumuman_gambar) VALUES ('$judul','$deskripsi','$author','$gambar')");
 		return $hsl;
 	}
 	function update_pengumuman($kode,$judul,$deskripsi){

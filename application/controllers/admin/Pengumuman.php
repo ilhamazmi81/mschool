@@ -17,11 +17,39 @@ class Pengumuman extends CI_Controller{
 	}
 
 	function simpan_pengumuman(){
-		$judul=strip_tags($this->input->post('xjudul'));
-		$deskripsi=$this->input->post('xdeskripsi');
-		$this->m_pengumuman->simpan_pengumuman($judul,$deskripsi);
-		echo $this->session->set_flashdata('msg','success');
-		redirect('admin/pengumuman');
+		$config['upload_path'] = './assets/images/'; //path folder
+		$config['allowed_types'] = 'gif|jpg|png|jpeg'; //type yang dapat diakses bisa anda sesuaikan
+		$config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+
+		$this->upload->initialize($config);
+		if(!empty($_FILES['filefoto']['name'])) {
+			if ($this->upload->do_upload('filefoto')) {
+				$gbr = $this->upload->data();
+				//Compress Image
+				$config['image_library']='gd2';
+				$config['source_image']='./assets/images/'.$gbr['file_name'];
+				$config['create_thumb']= FALSE;
+				$config['maintain_ratio']= FALSE;
+				$config['quality']= '60%';
+				$config['width']= 710;
+				$config['height']= 460;
+				$config['new_image']= './assets/images/'.$gbr['file_name'];
+				$this->load->library('image_lib', $config);
+				$this->image_lib->resize();
+
+				$gambar = $gbr['file_name'];
+				$judul=strip_tags($this->input->post('xjudul'));
+				$deskripsi=$this->input->post('xdeskripsi');
+				$this->m_pengumuman->simpan_pengumuman($judul,$deskripsi,$gambar);
+				echo $this->session->set_flashdata('msg','success');
+				redirect('admin/pengumuman');
+			} else{
+				echo $this->session->set_flashdata('msg','warning');
+				redirect('admin/pengumuman');
+			}
+		} else {
+			redirect('admin/pengumuman');
+		}
 	}
 
 	function update_pengumuman(){

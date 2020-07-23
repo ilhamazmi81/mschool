@@ -17,16 +17,44 @@ class Agenda extends CI_Controller{
 	}
 
 	function simpan_agenda(){
-		$nama_agenda=strip_tags($this->input->post('xnama_agenda'));
-		$deskripsi=$this->input->post('xdeskripsi');
-		$mulai=$this->input->post('xmulai');
-		$selesai=$this->input->post('xselesai');
-		$tempat=$this->input->post('xtempat');
-		$waktu=$this->input->post('xwaktu');
-		$keterangan=$this->input->post('xketerangan');
-		$this->m_agenda->simpan_agenda($nama_agenda,$deskripsi,$mulai,$selesai,$tempat,$waktu,$keterangan);
-		echo $this->session->set_flashdata('msg','success');
-		redirect('admin/agenda');
+		$config['upload_path'] = './assets/images/'; //path folder
+		$config['allowed_types'] = 'gif|jpg|png|jpeg'; //type yang dapat diakses bisa anda sesuaikan
+		$config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+
+		$this->upload->initialize($config);
+		if(!empty($_FILES['filefoto']['name'])) {
+			if ($this->upload->do_upload('filefoto')) {
+				$gbr = $this->upload->data();
+				//Compress Image
+				$config['image_library']='gd2';
+				$config['source_image']='./assets/images/'.$gbr['file_name'];
+				$config['create_thumb']= FALSE;
+				$config['maintain_ratio']= FALSE;
+				$config['quality']= '60%';
+				$config['width']= 710;
+				$config['height']= 460;
+				$config['new_image']= './assets/images/'.$gbr['file_name'];
+				$this->load->library('image_lib', $config);
+				$this->image_lib->resize();
+
+				$nama_agenda=strip_tags($this->input->post('xnama_agenda'));
+				$deskripsi=$this->input->post('xdeskripsi');
+				$mulai=$this->input->post('xmulai');
+				$selesai=$this->input->post('xselesai');
+				$tempat=$this->input->post('xtempat');
+				$waktu=$this->input->post('xwaktu');
+				$keterangan=$this->input->post('xketerangan');
+				$gambar = $gbr['file_name'];
+				$this->m_agenda->simpan_agenda($nama_agenda,$deskripsi,$mulai,$selesai,$tempat,$waktu,$keterangan,$gambar);
+				echo $this->session->set_flashdata('msg','success');
+				redirect('admin/agenda');
+			} else{
+				echo $this->session->set_flashdata('msg','warning');
+				redirect('admin/agenda');
+			}
+		} else {
+			redirect('admin/agenda');
+		}
 	}
 
 	function update_agenda(){

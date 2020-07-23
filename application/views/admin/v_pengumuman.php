@@ -429,26 +429,30 @@
                         <h4 class="modal-title" id="myModalLabel">Add Pengumuman</h4>
                     </div>
                     <form class="form-horizontal" action="<?php echo base_url().'admin/pengumuman/simpan_pengumuman'?>" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">
-
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Judul</label>
-                                <div class="col-sm-7">
-                                  <input type="text" name="xjudul" class="form-control" id="inputUserName" placeholder="Judul" required>
-                                </div>
+                      <div class="modal-body">
+                          <div class="form-group">
+                            <label for="inputUserName" class="col-sm-4 control-label">Judul</label>
+                            <div class="col-sm-7">
+                              <input type="text" name="xjudul" class="form-control" id="inputUserName" placeholder="Judul" required>
                             </div>
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Deskripsi</label>
-                                <div class="col-sm-7">
-                                  <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Deskripsi ..." required></textarea>
-                                </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputUserName" class="col-sm-4 control-label">Deskripsi</label>
+                            <div class="col-sm-7">
+                              <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Deskripsi ..." required></textarea>
                             </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary btn-flat" id="simpan">Simpan</button>
-                    </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Gambar</label>
+                            <div class="col-sm-7">
+                              <input type="file" name="filefoto" style="width: 100%;" required>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary btn-flat" id="simpan">Simpan</button>
+                      </div>
                     </form>
                 </div>
             </div>
