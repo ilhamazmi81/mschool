@@ -51,7 +51,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">Menu Utama</li>
-        <?php if($this->session->userdata('akses') == '1' || $this->session->userdata('akses') == '2') { ?>
+        <?php if($this->session->userdata('akses') == '1' || $this->session->userdata('akses') == '2') : ?>
           <li>
             <a href="<?php echo base_url().'admin/dashboard'?>">
               <i class="fa fa-home"></i> <span>Dashboard</span>
@@ -74,9 +74,9 @@
               <li><a href="<?php echo base_url().'admin/kategori'?>"><i class="fa fa-wrench"></i> Kategori</a></li>
             </ul>
           </li>
-        <? } ?>
+        <?php endif;?>
 
-        <?php if($this->session->userdata('akses') == '1') { ?>
+        <?php if($this->session->userdata('akses') == '1') : ?>
           <li>
             <a href="<?php echo base_url().'admin/pengguna'?>">
               <i class="fa fa-users"></i> <span>Pengguna</span>
@@ -85,9 +85,9 @@
               </span>
             </a>
           </li>
-        <? } ?>
+        <?php endif;?>
 
-        <?php if($this->session->userdata('akses') == '1' || $this->session->userdata('akses') == '2') { ?>
+        <?php if($this->session->userdata('akses') == '1' || $this->session->userdata('akses') == '2') : ?>
           <li>
             <a href="<?php echo base_url().'admin/agenda'?>">
               <i class="fa fa-calendar"></i> <span>Agenda</span>
@@ -104,9 +104,9 @@
               </span>
             </a>
           </li>
-        <? } ?>
+       <?php endif;?>
 
-        <?php if($this->session->userdata('akses') == '1') { ?>
+        <?php if($this->session->userdata('akses') == '1') : ?>
           <li>
             <a href="<?php echo base_url().'admin/files'?>">
               <i class="fa fa-download"></i> <span>Download</span>
@@ -142,7 +142,7 @@
               </span>
             </a>
           </li>
-        <? } ?>
+       <?php endif;?>
       </ul>
     </section>
     <!-- /.sidebar -->
