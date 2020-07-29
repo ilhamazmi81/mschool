@@ -291,7 +291,7 @@ html
                 <div class="event-img2">
                 <?php foreach ($pengumuman->result() as $row) :?>
                 <div class="row">
-                    <div class="col-sm-3"> <img src="<?php echo base_url().'theme/images/announcement-icon.png'?>" class="img-fluid" alt="event-img"></div><!-- // end .col-sm-3 -->
+                    <div class="col-sm-3"> <img src="<?php echo base_url().'assets/images/'.$row->pengumuman_gambar?>" class="img-fluid" alt="event-img"></div><!-- // end .col-sm-3 -->
                     <div class="col-sm-9"> <h3><a href="<?php echo site_url('pengumuman');?>"><?php echo $row->pengumuman_judul;?></a></h3>
                       <span><?php echo $row->tanggal;?></span>
                       <p><?php echo limit_words($row->pengumuman_deskripsi,20).'...';?></p><br><br> 
@@ -305,11 +305,13 @@ html
                 <div class="row">
                     <div class="col-md-12">
                       <?php foreach ($agenda->result() as $row):?>
+                        <!-- <div class="col-sm-3"></div> -->
                         <div class="event_date">
-                            <div class="event-date-wrap">
+                        <img src="<?php echo base_url().'assets/images/'.$row->agenda_gambar?>" class="img-fluid" alt="event-img">
+                            <!-- <div class="event-date-wrap">
                                 <p><?php echo date("d", strtotime($row->agenda_tanggal));?></p>
                                 <span><?php echo date("M. y", strtotime($row->agenda_tanggal));?></span>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="date-description">
                             <h3><a href="<?php echo site_url('agenda');?>"><?php echo $row->agenda_nama;?></a></h3>
@@ -317,7 +319,6 @@ html
                             <hr class="event_line">
                         </div>
                         <?php endforeach;?>
-
                     </div>
                 </div>
 

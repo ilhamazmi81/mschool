@@ -135,10 +135,11 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-2">
-                                <div class="event-date">
+                                <img src="<?php echo base_url().'assets/images/'.$row->agenda_gambar?>" class="img-fluid" alt="event-img">
+                                <!-- <div class="event-date">
                                     <h4><?php echo date("d", strtotime($row->agenda_tanggal));?></h4> <span><?php echo date("M Y", strtotime($row->agenda_tanggal));?></span>
                                 </div>
-                                <span class="event-time"><?php echo $row->agenda_waktu;?></span>
+                                <span class="event-time"><?php echo $row->agenda_waktu;?></span> -->
                             </div>
                             <div class="col-md-10">
                                 <div class="event-heading">
