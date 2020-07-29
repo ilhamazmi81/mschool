@@ -17,9 +17,9 @@ class Agenda extends CI_Controller{
 	}
 
 	function simpan_agenda(){
-		$config['upload_path'] = './assets/images/'; //path folder
-		$config['allowed_types'] = 'gif|jpg|png|jpeg'; //type yang dapat diakses bisa anda sesuaikan
-		$config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+		$config['upload_path'] = './assets/images/';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+		$config['encrypt_name'] = TRUE; 
 
 		$this->upload->initialize($config);
 		if(!empty($_FILES['filefoto']['name'])) {
