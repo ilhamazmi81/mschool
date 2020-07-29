@@ -175,6 +175,7 @@
                 <thead>
                 <tr>
 					          <th style="width:70px;">#</th>
+                    <th>Gambar</th>
                     <th>Agenda</th>
                     <th>Tanggal</th>
                     <th>Tempat</th>
@@ -198,9 +199,10 @@
                        $agenda_keterangan=$i['agenda_keterangan'];
                        $agenda_author=$i['agenda_author'];
                        $tanggal=$i['tanggal'];
-
+                       $agenda_gambar=$i['agenda_gambar'];
                     ?>
                 <tr>
+                  <td><img src="<?php echo base_url().'assets/images/'.$agenda_gambar;?>" style="width:90px;"></td>
                   <td><?php echo $tanggal;?></td>
                   <td><?php echo $agenda_nama;?></td>
                   <td><?php echo $agenda_mulai.' s/d '.$agenda_selesai;?></td>
@@ -599,6 +601,13 @@
                                 <div class="col-sm-7">
                                   <textarea class="form-control" name="xketerangan" rows="2" placeholder="Keterangan ..."><?php echo $agenda_keterangan;?></textarea>
                                 </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">Gambar</label>
+                              <div class="col-sm-7">
+                                <input type="file" name="filefoto" style="width: 100%;" required>
+                              </div>
                             </div>
 
                     </div>

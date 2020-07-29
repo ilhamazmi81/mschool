@@ -15,6 +15,11 @@ class M_agenda extends CI_Model{
 		$hsl=$this->db->query("UPDATE tbl_agenda SET agenda_nama='$nama_agenda',agenda_deskripsi='$deskripsi',agenda_mulai='$mulai',agenda_selesai='$selesai',agenda_tempat='$tempat',agenda_waktu='$waktu',agenda_keterangan='$keterangan',agenda_author='$author' where agenda_id='$kode'");
 		return $hsl;
 	}
+	function update_agenda_dan_image($kode,$nama_agenda,$deskripsi,$mulai,$selesai,$tempat,$waktu,$keterangan,$gambar){
+		$author=$this->session->userdata('nama');
+		$hsl=$this->db->query("UPDATE tbl_agenda SET agenda_nama='$nama_agenda',agenda_deskripsi='$deskripsi',agenda_mulai='$mulai',agenda_selesai='$selesai',agenda_tempat='$tempat',agenda_waktu='$waktu',agenda_keterangan='$keterangan',agenda_author='$author',agenda_gambar='$gambar' where agenda_id='$kode'");
+		return $hsl;
+	}
 	function hapus_agenda($kode){
 		$hsl=$this->db->query("DELETE FROM tbl_agenda WHERE agenda_id='$kode'");
 		return $hsl;
