@@ -175,6 +175,7 @@
                 <thead>
                 <tr>
 					          <th style="width:70px;">#</th>
+                    <th>Gambar</th>
                     <th>Judul</th>
                     <th>Deskripsi</th>
                     <th>Tanggal Post</th>
@@ -192,10 +193,11 @@
                        $deskripsi=$i['pengumuman_deskripsi'];
                        $author=$i['pengumuman_author'];
                        $tanggal=$i['tanggal'];
-
+                       $gambar=$i['pengumuman_gambar'];
                     ?>
                 <tr>
                   <td><?php echo $no;?></td>
+                  <td><img src="<?php echo base_url().'assets/images/'.$gambar;?>" style="width:90px;"></td>
                   <td><?php echo $judul;?></td>
                   <td><?php echo $deskripsi;?></td>
                   <td><?php echo $tanggal;?></td>
@@ -476,21 +478,25 @@
                     </div>
                     <form class="form-horizontal" action="<?php echo base_url().'admin/pengumuman/update_pengumuman'?>" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
-
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Judul</label>
-                                <div class="col-sm-7">
-                                  <input type="hidden" name="kode" value="<?php echo $id;?>">
-                                  <input type="text" name="xjudul" class="form-control" value="<?php echo $judul;?>" id="inputUserName" placeholder="Judul" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Deskripsi</label>
-                                <div class="col-sm-7">
-                                  <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Deskripsi ..." required><?php echo $deskripsi;?></textarea>
-                                </div>
-                            </div>
-
+                      <div class="form-group">
+                          <label for="inputUserName" class="col-sm-4 control-label">Judul</label>
+                          <div class="col-sm-7">
+                            <input type="hidden" name="kode" value="<?php echo $id;?>">
+                            <input type="text" name="xjudul" class="form-control" value="<?php echo $judul;?>" id="inputUserName" placeholder="Judul" required>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="inputUserName" class="col-sm-4 control-label">Deskripsi</label>
+                          <div class="col-sm-7">
+                            <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Deskripsi ..." required><?php echo $deskripsi;?></textarea>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label">Gambar</label>
+                        <div class="col-sm-7">
+                          <input type="file" name="filefoto" style="width: 100%;" required>
+                        </div>
+                      </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
