@@ -266,18 +266,6 @@ html
                     </div>
                 </a>
             </div>
-
-            <div class="col-md-3">
-                <a href="<?php echo site_url('artikel');?>">
-                    <div class="card">
-                        <div class="card-body">
-                            <i class="fa fa-graduation-cap"></i>
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Beasiswa</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
 </section>
