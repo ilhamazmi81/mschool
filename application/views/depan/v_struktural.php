@@ -23,13 +23,35 @@
     <link href="<?php echo base_url().'theme/css/style.css'?>" rel="stylesheet">
 </head>
 <style type="text/css">
-  .navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #000000;
+}
+
+#gotoTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#gotoTop:hover {
+  background-color: #555;
 }
 </style>
 <body>
+    <script src="<?php echo base_url().'theme/js/scroll.js'?>"></script>
+    <button onclick="topFunction()" id="gotoTop" title="Go to top">Top</button>
     <!--============================= HEADER =============================-->
-    <div data-toggle="affix">
+    <div data-toggle="affix" id="affix" class="affix">
         <div class="container nav-menu2">
             <div class="row">
                 <div class="col-md-12">

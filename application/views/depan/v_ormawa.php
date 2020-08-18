@@ -132,7 +132,7 @@ html
   <script src="<?php echo base_url().'theme/js/scroll.js'?>"></script>
   <button onclick="topFunction()" id="gotoTop" title="Go to top">Top</button>
     <!--============================= HEADER =============================-->
-    <div data-toggle="affix">
+    <div data-toggle="affix" id="affix" class="affix">
         <div class="container nav-menu2">
             <div class="row">
                 <div class="col-md-12">
