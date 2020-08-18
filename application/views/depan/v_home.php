@@ -89,83 +89,84 @@ html
 <button onclick="topFunction()" id="gotoTop" title="Go to top">Top</button>
     <!--============================= HEADER =============================-->
 
-    <div data-toggle="affix">
-        <div class="container nav-menu2">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar2 navbar-toggleable-md navbar-light bg-faded">
-                        <button class="navbar-toggler navbar-toggler2 navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
-                            <span class="icon-menu"></span>
-                        </button>
-                        <a href="<?php echo site_url('');?>" class="navbar-brand nav-brand2"><img class="img img-responsive" width="170px;" src="<?php echo base_url().'theme/images/logo.png'?>"></a>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('home');?>">Home</a>
-                                </li>
+<div data-toggle="affix">
+    <div class="container nav-menu2">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar2 navbar-toggleable-md navbar-light bg-faded">
+                    <button class="navbar-toggler navbar-toggler2 navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+                        <span class="icon-menu"></span>
+                    </button>
+                    <a href="<?php echo site_url('');?>" class="navbar-brand nav-brand2"><img class="img img-responsive" width="170px;" src="<?php echo base_url().'theme/images/logo.png'?>"></a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('home');?>">Home</a>
+                            </li>
+                            <li class="dropdown nav-item">
+                                
+                                <a href="#" class="nav-link" data-toggle="dropdown">Profile<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="<?php echo site_url('about');?>">Visi dan Misi</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('struktural');?>">Struktural</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('contact');?>">Kontak</a></li>
+                                </ul>
+                            </li>
                                 <li class="dropdown nav-item">
-                                    
-                                    <a href="#" class="nav-link" data-toggle="dropdown">Profile<b class="caret"></b></a>
-                                      <ul class="dropdown-menu">
-                                      <li><a class="nav-link" href="<?php echo site_url('about');?>">Visi dan Misi</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('struktural');?>">Struktural</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('contact');?>">Kontak</a></li>
-                                  </ul>
-                              </li>
-                                 <li class="dropdown nav-item">
-                                    
-                                    <a href="#" class="nav-link" data-toggle="dropdown">Informasi<b class="caret"></b></a>
-                                      <ul class="dropdown-menu">
-                                      <li><a class="nav-link" href="#pengumuman">Agenda</a></li>
-                                      <li><a class="nav-link" href="#berita">Berita</a></li>
-                                      <li><a class="nav-link" href="#pengumuman"> Pengumuman</a>
-                                       </li>
-                                  </ul>
-                              </li>
-                               
-                                 <li class="dropdown nav-item">
-                                    <a href="#" class="nav-link" data-toggle="dropdown">Beasiswa<b class="caret"></b></a>
-                                      <ul class="dropdown-menu">
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/Bidikmisi')?>">Bidikmisi</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/KP')?>">BPM-KP</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/SSO')?>">BPM-SSO</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/PPA')?>">Beasiswa BPP-PPA</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/BSM')?>">Beasiswa BSM</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/SEM2')?>">Beasiswa UAD Semester II</a></li>
-                                      <li><a class="nav-link" href="#">Monev BPM-Bidikmisi</a></li>
-                                      
-                                   
-                                    </ul>
+                                
+                                <a href="#" class="nav-link" data-toggle="dropdown">Informasi<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="#pengumuman">Agenda</a></li>
+                                    <li><a class="nav-link" href="#berita">Berita</a></li>
+                                    <li><a class="nav-link" href="#pengumuman"> Pengumuman</a>
                                     </li>
-
-                                 <li class="dropdown nav-item">
+                                </ul>
+                            </li>
+                            
+                                <li class="dropdown nav-item">
+                                <a href="#" class="nav-link" data-toggle="dropdown">Beasiswa<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/Bidikmisi')?>">Bidikmisi</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/KP')?>">BPM-KP</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/SSO')?>">BPM-SSO</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/PPA')?>">Beasiswa BPP-PPA</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/BSM')?>">Beasiswa BSM</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/SEM2')?>">Beasiswa UAD Semester II</a></li>
+                                    <li><a class="nav-link" href="#">Monev BPM-Bidikmisi</a></li>
                                     
-                                    <a href="#" class="nav-link" data-toggle="dropdown">Kemahasiswaan<b class="caret"></b></a>
-                                      <ul class="dropdown-menu">
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/p2k');?>">P2K</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/Prestasi');?>">Prestasi</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/PKM');?>">PKM</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/Kompetisi');?>">Kompetisi</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('ormawa');?>">Organisasi Kemahasiswaan</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('ortom');?>">Organisasi Ortonom</a></li>
-                                      <li><a class="nav-link" href="<?php echo site_url('blog/kategori/SKPI');?>">SKPI</a></li>
-                                  </ul>
-                              </li>
-                                      
-                                      
-                               <li class="nav-item">
-                                  <a class="nav-link" href="<?php echo site_url('download');?>">Unduhan</a>
+                                
+                                </ul>
                                 </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="<?php echo site_url('contact');?>">Tracer Study</a>
-                                </li>
-                             </ul>
-                        </div>
-                    </nav>
-                </div>
+
+                                <li class="dropdown nav-item">
+                                
+                                <a href="#" class="nav-link" data-toggle="dropdown">Kemahasiswaan<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/p2k');?>">P2K</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/Prestasi');?>">Prestasi</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/PKM');?>">PKM</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/Kompetisi');?>">Kompetisi</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('ormawa');?>">Organisasi Kemahasiswaan</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('ortom');?>">Organisasi Ortonom</a></li>
+                                    <li><a class="nav-link" href="<?php echo site_url('blog/kategori/SKPI');?>">SKPI</a></li>
+                                </ul>
+                            </li>
+                                    
+                                    
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('download');?>">Unduhan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('contact');?>">Tracer Study</a>
+                            </li>
+                            </ul>
+                    </div>
+                </nav>
             </div>
         </div>
-      </div>
+    </div>
+</div>
+
 <section>
     <div class="slider_img layout_two">
         <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -175,7 +176,7 @@ html
                 <li data-target="#carousel" data-slide-to="2"></li>
             </ol> -->
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
+                <!-- <div class="carousel-item active"> -->
                     <img class="d-block" src="<?php echo base_url().'theme/images/s2.jpg'?>" alt="First slide">
                     <!-- <div class="carousel-caption d-md-block">
                         <div class="slider_title">
@@ -186,7 +187,7 @@ html
                            
                         </div>
                     </div> -->
-                </div>
+                <!-- </div> -->
 
                 <!-- <div class="carousel-item">
                     <img class="d-block" src="<?php echo base_url().'theme/images/s1.jpg'?>" alt="Second slide">
