@@ -7,6 +7,7 @@
 			$this->load->model('m_agenda');
 			$this->load->model('m_files');
 			$this->load->model('m_pengunjung');
+			$this->load->model('m_tulisan');
 			$this->m_pengunjung->count_visitor();
 		}
 		function index(){
@@ -16,6 +17,8 @@
 
 			$x['tot_files']=$this->db->get('tbl_files')->num_rows();
 			$x['tot_agenda']=$this->db->get('tbl_agenda')->num_rows();
+			$x['tot_pengumuman']=$this->db->get('tbl_pengumuman')->num_rows();
+			$x['tot_artikel']=$this->db->get('tbl_tulisan')->num_rows();
 			$this->load->view('depan/v_home',$x);
 		}
 }

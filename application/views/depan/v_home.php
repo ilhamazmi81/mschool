@@ -235,7 +235,8 @@ html
                 <a href="<?php echo site_url('agenda');?>">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <i class="fa fa-book"></i>
+                            <h5 class="card-title"><?php echo $tot_agenda?></h5>
                             <p class="card-text">Agenda</p>
                         </div>
                     </div>
@@ -246,7 +247,8 @@ html
                 <a href="<?php echo site_url('pengumuman');?>">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <i class="fa fa-info"></i>
+                            <h5 class="card-title"><?php echo $tot_pengumuman?></h5>
                             <p class="card-text">Pengumuman</p>
                         </div>
                     </div>
@@ -257,7 +259,8 @@ html
                 <a href="<?php echo site_url('artikel');?>">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <i class="fa fa-newspaper-o"></i>
+                            <h5 class="card-title"><?php echo $tot_artikel?></h5>
                             <p class="card-text">Berita</p>
                         </div>
                     </div>
@@ -268,6 +271,7 @@ html
                 <a href="<?php echo site_url('artikel');?>">
                     <div class="card">
                         <div class="card-body">
+                            <i class="fa fa-graduation-cap"></i>
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Beasiswa</p>
                         </div>
