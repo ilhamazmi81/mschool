@@ -417,6 +417,7 @@ a {
 
 .informasi .card {
   /* background: blue; */
+  font-family: Arial, Helvetica, sans-serif;
   width: 15rem;
   height: 250px;
   border-radius: 0px;
@@ -435,17 +436,17 @@ a {
 } */
 
 .informasi a h5 {
-  color: #000;
+  color: #2d2d2d;
 }
 
 .informasi a p {
-  color: #000;
-  opacity: .7;
+  color: #2d2d2d;
+  opacity: .8;
 }
 
 .informasi a i {
-  color: #000;
-  opacity: .7;
+  color: #2d2d2d;
+  opacity: .8;
 }
 
 .informasi a .fa { transform: scale(2,2); }
@@ -3067,6 +3068,7 @@ div.panel {
    ============================================================== */
 .nav-menu2 .navbar-light .navbar-nav .nav-link {
   color: #2d2d2d;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 2; }
   .nav-menu2 .navbar-light .navbar-nav .nav-link:hover {
