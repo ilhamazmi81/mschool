@@ -2,10 +2,13 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+    var x = document.getElementById("affix");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("gotoTop").style.display = "block";
+        x.classList.add("show-color-background-affix");
     } else {
         document.getElementById("gotoTop").style.display = "none";
+        x.classList.remove("show-color-background-affix");
     }
    
 }

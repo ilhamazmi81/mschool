@@ -3652,7 +3652,7 @@ div.panel {
   background-color: transparent;
 }
 
-.affix .show-color-background {
+.show-color-background-affix {
   background-color: #fff;
   border-bottom: 1px solid #e6e6e6;
   -webkit-box-shadow: 0px 3px 12px -5px rgba(0, 0, 0, 0.2);
