@@ -322,6 +322,7 @@ a {
   background: #000; }
   .slider_img img {
     min-width: 100%;
+    height: 550px;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: 50% 50%;
@@ -403,6 +404,27 @@ a {
   .fa-slider {
     border: none;
     padding: 0; } }
+
+/* ==============================================================
+   INFROMASI
+   ============================================================== */
+.informasi {
+  position: relative;
+  /* background: red; */
+  width: 100%;
+  margin-top: -60px;
+}
+
+.informasi .card {
+  /* background: red; */
+  width: 15rem;
+  height: 250px;
+  border-radius: 0px;
+}
+
+/* .informasi .card:hover {
+  cursor: pointer;
+} */
 
 /* ==============================================================
    ABOUT

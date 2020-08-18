@@ -169,15 +169,15 @@ html
 <section>
     <div class="slider_img layout_two">
         <div id="carousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+            <!-- <ol class="carousel-indicators">
                 <li data-target="#carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel" data-slide-to="1"></li>
                 <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
+            </ol> -->
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <img class="d-block" src="<?php echo base_url().'theme/images/s2.jpg'?>" alt="First slide">
-                    <div class="carousel-caption d-md-block">
+                    <!-- <div class="carousel-caption d-md-block">
                         <div class="slider_title">
                             <br><br><br>
                             <br><br><br>
@@ -185,9 +185,10 @@ html
                             <h1>Kerjasama Tim Yang Baik</h1>
                            
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="carousel-item">
+
+                <!-- <div class="carousel-item">
                     <img class="d-block" src="<?php echo base_url().'theme/images/s1.jpg'?>" alt="Second slide">
                     <div class="carousel-caption d-md-block">
                         <div class="slider_title">
@@ -197,8 +198,9 @@ html
                             <h1>Rektor Bersama Organisasi Kemahasiswaan Terbaik</h1>
                            </div>
                     </div>
-                </div>
-                <div class="carousel-item">
+                </div> -->
+
+                <!-- <div class="carousel-item">
                     <img class="d-block" src="<?php echo base_url().'theme/images/da.jpg'?>" alt="Third slide">
                     <div class="carousel-caption d-md-block">
                         <div class="slider_title">
@@ -211,20 +213,70 @@ html
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <!-- <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
                 <i class="icon-arrow-left fa-slider" aria-hidden="true"></i>
                 <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
                 <i class="icon-arrow-right fa-slider" aria-hidden="true"></i>
                 <span class="sr-only">Next</span>
-            </a>
+            </a> -->
         </div>
     </div>
 </section>
 <!--//END HEADER -->
+
+<section class="informasi justify-content-center">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <a href="<?php echo site_url('agenda');?>">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Agenda</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="<?php echo site_url('pengumuman');?>">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Pengumuman</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="<?php echo site_url('artikel');?>">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Berita</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="<?php echo site_url('artikel');?>">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Beasiswa</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!--============================= ABOUT =============================-->
