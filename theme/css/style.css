@@ -445,6 +445,7 @@ a {
 
 .informasi a i {
   color: #000;
+  opacity: .7;
 }
 
 .informasi a .fa { transform: scale(2,2); }
