@@ -654,7 +654,9 @@ courses_box {
 
 .btn-courses {
   font-size: 15px;
-  font-weight: 700; }
+  font-weight: 700; 
+  margin-bottom: 50px;
+}
 
 .rotate {
   -moz-transform: rotate(43deg);
